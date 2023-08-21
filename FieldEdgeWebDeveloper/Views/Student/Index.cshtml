@@ -1,0 +1,41 @@
+﻿@model List<FieldEdgeWebDeveloper.Models.CustomerModel>
+@{}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">CustomerId</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Country Code</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Balance</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Firstname</td>
+                <td>@item.Lastname</td>
+                <td><a href="#"> @item.Email </a></td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.CountryCode</td>
+                <td>@item.Gender</td>
+                <td>@item.Balance.Value.ToString("C3",System.Globalization.CultureInfo.CreateSpecificCulture("en-US")) </td>
+                <td><a href="Student/Edit/@item.Id"> Edit </a></td>
+                <td><a href="Student/Delete/@item.Id">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Add">Create New</a>
+</p>
+
+

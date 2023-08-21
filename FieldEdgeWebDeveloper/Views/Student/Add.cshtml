@@ -1,0 +1,54 @@
+﻿@model FieldEdgeWebDeveloper.Models.CustomerModel
+@{
+}
+
+<h1>Create</h1>
+
+<h4>Student</h4>
+<div class="row">
+    <form method="post" action="Add" data-val="true">
+    <div class="mb-3">
+        <label for="" class="form-label">First Name</label>
+        <input type="text" class="form-control" asp-for="Firstname">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Last Name</label>
+        <input type="text" class="form-control" asp-for="Lastname">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email"  class="form-control" asp-for="Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" asp-for="PhoneNumber">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">CountryCode </label>
+        <input type="text"  class="form-control" asp-for="CountryCode">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Gender </label>
+        <input type="text" class="form-control" asp-for="Gender">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Balance </label>
+        <input type="text" class="form-control" asp-for="Balance">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<div class="row">
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
